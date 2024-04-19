@@ -1,0 +1,8 @@
+input[type="email"]:focus {
+    outline: none; /* Remove default outline */
+    border-color: #ccc; /* Apply desired border color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Apply desired box shadow */
+  }
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset; /* Override blue background with white */
+  }
