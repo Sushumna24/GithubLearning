@@ -1,4 +1,5 @@
 import React from 'react';
+import AxiosTutorial from './Components/Axios';
 import Storage from './Components/storage';
 import ComponentC from './Components/ComponentC'
 import Dashboard from './Components/Dashboard';
@@ -20,7 +21,7 @@ function App() {
       </main>
       {/* <Storage/> */}
       
-      
+      {/* <AxiosTutorial/> */}
     </div>
   );
 }
