@@ -61,6 +61,7 @@ class ClassTimer extends Component {
 
     componentWillUnmount() {
         clearInterval(this.interval);
+        
     }
 
     startTimer = () => {
