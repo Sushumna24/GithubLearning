@@ -16,9 +16,9 @@ function HookCounterFive() {
             }} onMouseEnter={(e) => { e.target.style.backgroundColor = 'purple'; }}
                 onMouseLeave={(e) => { e.target.style.backgroundColor = 'blueviolet'; }} onClick={addItem}>Add a Number</button>
             <ul>
-                {items.map(item => (
+                {items.map(item => 
                     <li key={item.id}>{item.value}</li>
-                )
+                
 
                 )}
             </ul>
