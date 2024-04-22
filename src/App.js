@@ -5,6 +5,7 @@ import ComponentC from './Components/ComponentC'
 import Dashboard from './Components/Dashboard';
 import CustomModal from './Components/customModal';
 import Games from './Components/hierarchial';
+import AxiosTutorialTwo from './Components/axiosPostPutDelete';
 export const UserContext=React.createContext()
 export const ChannelContext=React.createContext()
 function App() {
@@ -17,11 +18,12 @@ function App() {
         <ComponentC/>
       </UserContext.Provider> */}
       <main>
-        <Dashboard />
+        <Dashboard/>
       </main>
-      {/* <Storage/> */}
-      
-      {/* <AxiosTutorial/> */}
+      {/* <Storage/>
+       */}
+      {/* <AxiosTutorial/>
+      <AxiosTutorialTwo/> */}
     </div>
   );
 }
