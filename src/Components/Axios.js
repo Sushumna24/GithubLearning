@@ -6,12 +6,12 @@ function AxiosTutorial()
     useEffect(()=>
     {
     axios.get("https://jsonplaceholder.typicode.com/users")
-    .then((response)=>{
-        console.log(response)
-        setData(response.data)
-    }
-
-    )
+    .then(response=>
+        {
+            console.log(response.data)
+            setData(response.data)
+        })
+    .catch(err=>console.log(err))
 })
 return (
 <div>

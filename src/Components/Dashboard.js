@@ -1,11 +1,8 @@
 import React ,{useState}from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Form ,useSubmit} from 'react-router-dom';
-import './Dashboard.css'; // Import CSS for styling sidebar
-
-// Import all the components
+import './Dashboard.css'; 
 import Greets from './Greet';
 import { TodoLists } from './map';
-
 import ClassCounter from './classCounter';
 import ClassTimer from './ClassTimer';
 import HookCounter from './HookComponent';
@@ -34,6 +31,13 @@ import LocalStorage from './login';
 import Storage from './storage';
 import Child from './child';
 import ChildTwo from './ChildToParent2';
+import ClickCounter from './ClickCounter';
+import Search from './searchAndSortFilter';
+import AxiosTutorialTwo from './axiosPostPutDelete';
+import AxiosTutorial from './Axios';
+import HoverCounter from './HoverCounter';
+import enhancedCounter from './EnhancedCounter';
+import BmiCalculator from './BMI Calculator';
 export const UserContext=React.createContext()
 export const ChannelContext=React.createContext()
 const Dashboard = () => {
@@ -78,9 +82,12 @@ const Dashboard = () => {
     { name: 'propsDestructuring', path: '/propsdestructuring' },
     { name: 'propsOne', path: '/propsone' },
     { name: 'propsTwo', path: '/propstwo' },
-    {name:'calculator',path:'/calculator'}
-    
-    
+    {name:'calculator',path:'/calculator'},
+    {name:'hoc',path:'/hoc'},
+    {name:'search',path:'/search'},
+    {name:'axiostutorial',path:'/axiostutorial'},
+    {name:'axiostutorialtwo',path:'/axiostutorialtwo'},
+    {name:'bmicalculator',path:'/BMI'}
   ];
 
   return (
@@ -116,6 +123,10 @@ const Dashboard = () => {
                                         }
                                     </ul>
                                 </>}/>
+            <Route path="/search" element={<Search/>}/>
+            <Route path="/axiostutorial" element={<AxiosTutorial/>}/>
+             <Route path="/axiostutorialtwo" element={<AxiosTutorialTwo/>}/>
+            <Route path="/hoc" element={<enhancedCounter component={ClickCounter} Component1={HoverCounter}/>}/>
              <Route path="/localstorage" element={<LocalStorage/>}/>
             <Route path="/storage" element={<Storage/>}/>
             <Route path="/styles" element={<Greets />} />
@@ -144,6 +155,7 @@ const Dashboard = () => {
             <Route path="/" element={<Forms />} />
             <Route path='*' element={<NotFound/>}/>
             <Route path="/calculator" element={<Calculator/>}/> 
+            <Route path="/BMI" element={<BmiCalculator/>}/>
           </Routes>
         </div>
       </div>
